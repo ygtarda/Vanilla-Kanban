@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Panosu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="board">
+        <div class="column">
+            <h3>📌 Yapılacaklar</h3>
+            <div class="task-container" id="todo">
+                <div class="task" draggable="true" contenteditable="true">Video çek</div>
+                <div class="task" draggable="true" contenteditable="true">Spor yap</div>
+                <div class="task" draggable="true" contenteditable="true">Python çalış</div>
+            </div>
+        </div>
+
+        <div class="column">
+            <h3>⏳ Sürüyor</h3>
+            <div class="task-container" id="progress">
+                <div class="task" draggable="true" contenteditable="true">Projeyi kodla</div>
+            </div>
+        </div>
+
+        <div class="column">
+            <h3>✅ Bitti</h3>
+            <div class="task-container" id="done">
+                <div class="task" draggable="true" contenteditable="true">Kahvaltı</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="info">
+        <p>Kartları sürükleyip bırakabilirsin. Yazıları değiştirmek için üzerine tıkla.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

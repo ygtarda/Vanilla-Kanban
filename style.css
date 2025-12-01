@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eef2f5;
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.board {
+    display: flex;
+    gap: 20px;
+    width: 90%;
+    max-width: 1000px;
+    overflow-x: auto;
+    padding: 20px 0;
+}
+
+.column {
+    background: #fff;
+    min-width: 300px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.column h3 {
+    margin: 0 0 15px 0;
+    text-align: center;
+    color: #333;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.task-container {
+    flex-grow: 1;
+    min-height: 100px;
+    /* Boşken de sürüklenebilsin */
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.task-container.hovered {
+    background-color: #e2e6ea;
+    border: 2px dashed #cbd5e0;
+}
+
+.task {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: move;
+    border-left: 5px solid #3498db;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Sürüklenirkenki hali */
+.task.dragging {
+    opacity: 0.5;
+    transform: scale(0.95);
+    background-color: #eef2f5;
+}
+
+.task:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.task:focus {
+    outline: 2px solid #3498db;
+    background-color: #fff;
+}
+
+/* Kolon renkleri */
+.column:nth-child(1) .task {
+    border-left-color: #ff7675;
+}
+
+.column:nth-child(2) .task {
+    border-left-color: #fdcb6e;
+}
+
+.column:nth-child(3) .task {
+    border-left-color: #00b894;
+}
+
+.info {
+    margin-top: 20px;
+    color: #666;
+}
